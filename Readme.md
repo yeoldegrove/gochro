@@ -63,14 +63,30 @@ Be sure to use the --init switch to get rid of zombie processes of chromium.
 -proxy                 Use a proxy server to connect to the internet. Please use format IP:PORT without a protocol. Example: 1.2.3.4:3128
 ```
 
+### Paramters for GET requests
+```text
+url                    Url to screenshot
+w                      width of the screenshot
+h                      height of the screenshot
+useragent              send custom useragent
+headers                send custom headers. Example: $headerName1___$headerValue1,$headerValue2___$headerValue2
+pageSize               set a standard page size, e.g. A4
+preferCSSPageSize      prefer pageSize set in CSS
+landcape               make screenshot in landscape mode
+marginTop              add margin in px
+marginBottom           add margin in px
+marginLeft             add margin in px
+marginRight            add margin in px
+```
+
 ### Use the docker hub image
 
-You can also use the [prebuit image](https://hub.docker.com/r/firefart/gochro) from dockerhub.
+You can also use the [prebuit image](https://hub.docker.com/r/yeoldegrove/gochro) from dockerhub.
 
 To pull the image run
 
 ```bash
-docker pull firefart/gochro
+docker pull yeoldegrove/gochro
 ```
 
 ### Include in docker-compose
@@ -84,7 +100,7 @@ version: '3.7'
 
 services:
   gochro:
-    image: firefart/gochro
+    image: yeoldegrove/gochro
     init: true
     container_name: gochro
     security_opt:

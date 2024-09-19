@@ -29,3 +29,5 @@ config.json
 chrome.json
 gochro
 dist/
+.envrc
+shell.nix

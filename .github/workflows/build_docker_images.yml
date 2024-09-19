@@ -43,5 +43,5 @@ jobs:
         with:
           push: true
           tags: |
-            firefart/gochro:latest
-            ghcr.io/firefart/gochro:latest
+            yeoldegrove/gochro:latest
+            ghcr.io/yeoldegrove/gochro:latest
