@@ -7,7 +7,6 @@ import (
     "flag"
     "fmt"
     "io"
-    "math/rand"
     "net/http"
     "os"
     "os/signal"
