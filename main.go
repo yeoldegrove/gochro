@@ -42,16 +42,6 @@ var (
 
 type application struct{}
 
-var letterRunes = []rune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
-
-func randStringRunes(n int) string {
-    b := make([]rune, n)
-    for i := range b {
-        b[i] = letterRunes[rand.Intn(len(letterRunes))]
-    }
-    return string(b)
-}
-
 func main() {
     var host string
     var wait time.Duration
@@ -461,21 +451,6 @@ func getBoolParameter(r *http.Request, paramname string) (*bool, error) {
     }
 
     return &b, nil
-}
-
-// Helper function to parse float parameters
-func getFloatParameter(r *http.Request, paramname string) (*float64, error) {
-    p, ok := r.URL.Query()[paramname]
-    if !ok || len(p[0]) < 1 {
-        return nil, nil
-    }
-
-    f, err := strconv.ParseFloat(p[0], 64)
-    if err != nil {
-        return nil, fmt.Errorf("invalid parameter %s=%q - %w", paramname, p[0], err)
-    }
-
-    return &f, nil
 }
 
 // Helper function to parse headers parameter
