@@ -3,8 +3,8 @@ module github.com/FireFart/gochro
 go 1.23
 
 require (
-	github.com/chromedp/cdproto v0.0.0-20250109193942-1ec2f6cf5d86
-	github.com/chromedp/chromedp v0.11.2
+	github.com/chromedp/cdproto v0.0.0-20250120090109-d38428e4d9c8
+	github.com/chromedp/chromedp v0.12.1
 	github.com/gorilla/handlers v1.5.2
 	github.com/gorilla/mux v1.8.1
 	github.com/sirupsen/logrus v1.9.3
